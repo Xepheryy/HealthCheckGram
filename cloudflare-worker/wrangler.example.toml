@@ -1,0 +1,7 @@
+name = "cloudflare-worker"
+main = "src/index.ts"
+compatibility_date = "2024-10-17"
+[observability]
+enabled = true
+[vars]
+TELEGRAM_BOT_TOKEN = "fill in your own"

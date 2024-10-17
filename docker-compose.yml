@@ -1,0 +1,9 @@
+services:
+  health-check-bot:
+    build: .
+    environment:
+      CLOUDFLARE_WORKER_URL: ${CLOUDFLARE_WORKER_URL}
+      TELEGRAM_ID: ${TELEGRAM_ID}
+      CRON_INTERVAL: ${CRON_INTERVAL}
+      HCG_FRONTEND: "frontend:3000"
+    restart: unless-stopped

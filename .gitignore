@@ -1,0 +1,33 @@
+# Deno
+.deno/
+*.orig
+*.pyc
+*.swp
+
+# Environment variables
+.env
+
+# Cloudflare Workers
+.wrangler/
+dist/
+cloudflare-worker/wrangler.toml
+
+# Node.js (for Cloudflare Worker development)
+node_modules/
+
+# Docker
+*.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak

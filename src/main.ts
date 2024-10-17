@@ -28,8 +28,8 @@ async function checkServices(): Promise<{ [key: string]: string }> {
 		if (key.startsWith("HCG_")) {
 			const serviceName = key.slice(4); // Remove "HCG_" prefix
 			try {
-				const response = await fetch(value);
-				statuses[serviceName] = response.ok ? "✅ OK" : "❌ Down";
+				const response = await fetch(value as string);
+				statuses[serviceName] = response.ok ? "✅" : "❌ Down";
 			} catch (error) {
 				statuses[serviceName] = "❌ Down";
 			}

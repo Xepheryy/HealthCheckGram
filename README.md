@@ -48,8 +48,9 @@ When using docker-compose, you can set the following environment variables:
 Make sure to set these variables in your environment or in a `.env` file before running the Docker container.
 
 ## Usage
-
-- Reference the built container by name via ghcr.
+- Onboard yourself @HealthCheckGramBot on [Telegram](www.telegram.org)
+- Retrieve your telegram ID [random article showing how](https://www.alphr.com/telegram-find-user-id/)
+- Reference the built container by name via ghcr. 
 - Use it in your compose / as a standalone docker run
 - Specify the envs, health check points etc.
 

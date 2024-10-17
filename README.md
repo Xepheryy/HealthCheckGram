@@ -2,14 +2,14 @@
 
 HealthCheckGram is a service that performs health checks on specified endpoints and sends status updates via Telegram.
 
-> **Note**
+> [!NOTE] 
 > I will be using cloudflare worker nodes to send the messages since they're free for 100,000 requests a day. Unfortunately, if there is abuse, I will be forced to take it down. You can follow the code and steps outlined in `cloudflare-worker` to deploy your own worker on the [edge](https://developers.cloudflare.com/workers/)
 
 ### Rationale
 I created HealthCheckGram for quick service updates without a full healthcheck workflow. It's particularly useful for homelab monitoring/non-critical systems, providing fast uptime stats and downtime notifications. Also since deno v2 just released at the time of writing, it seemed cool to try it out.
 
-> **Warning**
-> Since this is running on a cron timer, it might not notify you immediately so expect some lag time. DO NOT USE THIS FOR MISSION CRITICAL SYSTEMS
+> [!WARNING] 
+> Since this is running on a cron timer, it might not notify you immediately so expect some lag time. **DO NOT USE THIS FOR MISSION CRITICAL SYSTEMS**
 
 
 ## Environment Variables
@@ -26,6 +26,9 @@ The following environment variables are used to configure the application:
 
 Example of a service health check variable:
 - `HCG_FRONTEND`: "<docker_dns_name:port>
+
+## Recommendation
+I recommend putting the env variables in your `docker-compose.yml` directly so it only affects the container running the healthchecks.
 
 ## Cloudflare Worker Configuration
 

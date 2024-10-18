@@ -6,7 +6,7 @@ HealthCheckGram is a service that performs health checks on specified endpoints 
 > I will be using cloudflare worker nodes to send the messages since they're free for 100,000 requests a day. Unfortunately, if there is abuse, I will be forced to take it down. You can follow the code and steps outlined in `cloudflare-worker` to deploy your own worker on the [edge](https://developers.cloudflare.com/workers/)
 
 ### Rationale
-I created HealthCheckGram for quick service updates without a full healthcheck workflow. It's particularly useful for homelab monitoring/non-critical systems, providing fast uptime stats and downtime notifications. Also since deno v2 just released at the time of writing, it seemed cool to try it out.
+I created HealthCheckGram for quick service updates without a full healthcheck workflow. It's particularly useful for homelab monitoring/non-critical systems, as a quick and dirty solution. Also since deno v2 just released at the time of writing, it seemed cool to try it out.
 
 > [!WARNING] 
 > Since this is running on a cron timer, it might not notify you immediately so expect some lag time. **DO NOT USE THIS FOR MISSION CRITICAL SYSTEMS**

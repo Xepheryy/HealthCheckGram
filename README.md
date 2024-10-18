@@ -50,7 +50,7 @@ Make sure to set these variables in your environment or in a `.env` file before 
 ## Usage
 - Onboard yourself @HealthCheckGramBot <img src="https://github.com/user-attachments/assets/0e463238-1e43-40af-9c56-75c2fed3ab76" width="200" alt="HealthCheckGramBot onboarding">
 - Retrieve your telegram ID [random article showing how](https://www.alphr.com/telegram-find-user-id/)
-- Reference the built container by name via ghcr. 
+- Reference the built container by name `ghcr.io/xepheryy/healthcheckgram:latest`
 - Use it in your compose / as a standalone docker run
 - Specify the envs, health check points etc.
 
